@@ -11,18 +11,6 @@ var wg sync.WaitGroup
 
 func main() {
 	time := time2.Now()
-	//iplist, _ := DataHandle.CheckIP(DataHandle.IP)
-	//fmt.Println(iplist)
-	//var ips = make(chan string, len(iplist)*25535)
-	//DataHandle.RunPing(iplist, ips)
-	//close(ips)
-	//
-	//for val1 := range ips {
-	//	for i := 40000; i < 65535; i++ {
-	//		fmt.Println(val1, i)
-	//	}
-	//}
-
 	AliveIP := DataHandle.AliveCheck()
 	ch2 := DataHandle.Port(AliveIP)
 	for _, url := range ch2 {
